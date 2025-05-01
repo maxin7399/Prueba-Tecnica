@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { Product } from "../types/Product";
+// import { useState, useEffect } from "react";
+// import { Product } from "../types/Product";
 
 function ProductCard() {
-  const [product, setProduct] = useState<Product[]>([]);
-  const API_URL = process.env; //TODO: Esta URL debe estar en .env (variables de entorno)
+  // const [product, setProduct] = useState<Product[]>([]);
+  // const API_URL = process.env; //TODO: Esta URL debe estar en .env (variables de entorno)
     /*
     useEffect(() => {
         fetch(API_URL)
@@ -14,7 +14,7 @@ function ProductCard() {
     return (
       <>
         <h1>Productos:</h1>
-        {product.map((item) => {
+        {/* {product.map((item) => {
           return (
             <div>
               <img src={item.image} width ="100px" height="100px"/>
@@ -27,7 +27,7 @@ function ProductCard() {
               <p>Precio: {item.price}</p>
             </div>
           );
-        })}
+        })} */}
         ;
       </>
     );
