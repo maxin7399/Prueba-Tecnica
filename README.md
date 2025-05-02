@@ -49,3 +49,6 @@ Muestra el carrito de compras con las siguientes características:
 
 ### 3. `Card.tsx`
 Componente para mostrar los detalles individuales del producto (por ejemplo, nombre, precio, imagen) en la lista de productos.
+
+---
+-Proyecto realizado por Mateo Miguel Marciglia Salcedo.
