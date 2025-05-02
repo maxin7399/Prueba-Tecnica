@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# Aplicación de Carrito de Compras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de carrito de compras construida con React. Permite a los usuarios explorar productos, agregarlos a un carrito de compras, ajustar las cantidades, ver el costo total y proceder al pago. El objetivo es ofrecer una experiencia de compra ligera e interactiva.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Listado de Productos:** Muestra una lista de productos obtenidos de una API.
+- **Agregar al Carrito:** Permite agregar productos al carrito de compras con un solo clic.
+- **Gestión del Carrito:**
+  - Incrementar o disminuir la cantidad de productos en el carrito.
+  - Eliminar productos del carrito.
+- **Cálculo de Total:** Calcula y muestra automáticamente el precio total de los productos en el carrito.
+- **Pago:** Permite proceder al pago, mostrando una alerta de confirmación y limpiando el carrito.
+- **Diseño Responsivo:** Diseño minimalista y centrado para facilitar su uso.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Instalación
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/maxin7399/Prueba-Tecnica.git
+   cd Prueba-Tecnica
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. **Iniciar la aplicación:**
+   ```bash
+   npm run dev
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## Descripción de los Componentes
+
+### 1. `App.tsx`
+El componente principal de la aplicación que gestiona el estado de los productos, el carrito y los cálculos del total. Utiliza hooks como `useState` y `useEffect` para manejar las actualizaciones dinámicas.
+
+### 2. `CartView.tsx`
+Muestra el carrito de compras con las siguientes características:
+- Lista de productos en el carrito.
+- Botones para disminuir cantidades o eliminar productos.
+- Cálculo del precio total.
+- Botón de pago que muestra una alerta de confirmación y limpia el carrito.
+
+### 3. `Card.tsx`
+Componente para mostrar los detalles individuales del producto (por ejemplo, nombre, precio, imagen) en la lista de productos.
